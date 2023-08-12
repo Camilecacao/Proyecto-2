@@ -40,9 +40,19 @@ h1{
     margin-top: 5%;
     margin-bottom: 5%;
 }
+.escondido{
+    display: none;
+}
 
 footer{
     display: flex;
     flex-direction: column;
     
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
