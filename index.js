@@ -3,6 +3,8 @@ const email=document.getElementById ("inputEmail")
 const telefono= document.getElementById ("inputTelefono")
 const nombre=document.getElementById ("inputName")
 const tbody= document.getElementById ("tbody")
+const guardar=document.getElementById ("guardar")
+const actualizar=document.getElementById ("actualizar")
 
 // console.log (form)
 // console.log (email)
@@ -73,7 +75,29 @@ const editar=(id)=>{
     nombre.value=humanoEditando.nombre
     email.value=humanoEditando.correo
     telefono.value=humanoEditando.telefono
+    guardar.classList.add("escondido")
+    actualizar.classList.remove("escondido")
 
 }
 
-form.addEventListener("submit", guardarDatos)
+const actualizarDatos=(event)=>{
+    event.preventDefault()
+    const humanoActualizado={
+        id:idEditando,
+        nombre:nombre.value,
+        correo:email.value,
+        telefono:telefono.value
+    }
+    const indice=registro.findIndex ((humano)=>humano.id==idEditando)
+    registro[indice]=humanoActualizado
+    guardarLs()
+    dibujar()
+    guardar.classList.remove("escondido")
+    actualizar.classList.add("escondido")
+    idEditando=null
+    form.reset()
+
+}
+
+guardar.addEventListener("click", guardarDatos)
+actualizar.addEventListener("click", actualizarDatos)
