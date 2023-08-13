@@ -15,6 +15,10 @@ let registro= []
 let idEditando= null
 
 function guardarDatos (event){
+    if(email.value==="" || nombre.value==="" ||telefono.value===""){
+        alert("Rellenar todo los campos en blanco")
+        return
+    }
     event.preventDefault ()
     const datos={
         id: Date.now(),

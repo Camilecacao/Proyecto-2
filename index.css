@@ -50,14 +50,29 @@ footer{
     
 }
 
+.img{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
 
 .container-footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 4%;
+    gap: 30px;
 }
+
+.CRRSSU{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+
+}
+
 .cierre{
     display: flex;
     flex-direction: row;
