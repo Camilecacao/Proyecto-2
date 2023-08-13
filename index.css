@@ -47,6 +47,7 @@ h1{
 footer{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     
 }
 
@@ -69,6 +70,8 @@ footer{
 .CRRSSU{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
     gap: 35px;
     margin-left: 25px;
     margin-right: 25px;
